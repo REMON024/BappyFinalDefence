@@ -1,0 +1,9 @@
+E:\ElectricBillPaymentSystem\BillPaymentBLLManager\bin\Debug\netstandard2.0\BillPaymentBLLManager.deps.json
+E:\ElectricBillPaymentSystem\BillPaymentBLLManager\bin\Debug\netstandard2.0\BillPaymentBLLManager.dll
+E:\ElectricBillPaymentSystem\BillPaymentBLLManager\obj\Debug\netstandard2.0\BillPaymentBLLManager.csprojAssemblyReference.cache
+E:\ElectricBillPaymentSystem\BillPaymentBLLManager\obj\Debug\netstandard2.0\BillPaymentBLLManager.AssemblyInfoInputs.cache
+E:\ElectricBillPaymentSystem\BillPaymentBLLManager\obj\Debug\netstandard2.0\BillPaymentBLLManager.AssemblyInfo.cs
+E:\ElectricBillPaymentSystem\BillPaymentBLLManager\bin\Debug\netstandard2.0\BillPaymentBLLManager.pdb
+E:\ElectricBillPaymentSystem\BillPaymentBLLManager\obj\Debug\netstandard2.0\BillPaymentBLLManager.csproj.CoreCompileInputs.cache
+E:\ElectricBillPaymentSystem\BillPaymentBLLManager\obj\Debug\netstandard2.0\BillPaymentBLLManager.dll
+E:\ElectricBillPaymentSystem\BillPaymentBLLManager\obj\Debug\netstandard2.0\BillPaymentBLLManager.pdb
