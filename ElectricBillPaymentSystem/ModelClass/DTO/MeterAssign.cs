@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+namespace ModelClass.DTO
 
-namespace BillPayment.DTO.DTO
 {
-   public class MeterAssign
+    public class MeterAssign
     {
         public int MeterAssignId { get; set; }
         public int CustomerId { get; set; }
@@ -16,5 +16,6 @@ namespace BillPayment.DTO.DTO
         public int Status { get; set; }
         public virtual Customer Customer { get; set; }
         public virtual MeterTable MeterTable { get; set; }
+        public ICollection<MeterReadingTable> MeterReadingTable{get;set;}
     }
 }

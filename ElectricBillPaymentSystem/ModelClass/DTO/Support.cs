@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BillPayment.DTO.DTO
+namespace ModelClass.DTO
 {
-   public class Support
+    public class Support
     {
         public int SupportId { get; set; }
         public string SupportContent { get; set; }

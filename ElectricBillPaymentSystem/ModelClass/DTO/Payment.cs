@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BillPayment.DTO.DTO
+namespace ModelClass.DTO
 {
-   public class Payment
+    public class Payment
     {
         public int PaymentId { get; set; }
         public int BillId { get; set; }
@@ -16,5 +16,7 @@ namespace BillPayment.DTO.DTO
         public string UpdatedBy { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public int Status { get; set; }
+        public virtual BillTable BillTable { get; set; }
+
     }
 }

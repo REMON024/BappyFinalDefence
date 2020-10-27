@@ -1496,46 +1496,30 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "BillPayment.DTO/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.9"
-        },
-        "compile": {
-          "bin/placeholder/BillPayment.DTO.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BillPayment.DTO.dll": {}
-        }
-      },
-      "BillPaymentDbContext/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "BillPayment.DTO": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "3.1.9",
-          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.9"
-        },
-        "compile": {
-          "bin/placeholder/BillPaymentDbContext.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BillPaymentDbContext.dll": {}
-        }
-      },
       "Context/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "BillPayment.DTO": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "3.1.9"
+          "Microsoft.EntityFrameworkCore": "3.1.9",
+          "Microsoft.EntityFrameworkCore.Relational": "3.1.9",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.9",
+          "ModelClass": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Context.dll": {}
         },
         "runtime": {
           "bin/placeholder/Context.dll": {}
+        }
+      },
+      "ModelClass/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/ModelClass.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ModelClass.dll": {}
         }
       }
     }
@@ -5754,25 +5738,19 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "BillPayment.DTO/1.0.0": {
-      "type": "project",
-      "path": "../BillPayment.DTO/BillPayment.DTO.csproj",
-      "msbuildProject": "../BillPayment.DTO/BillPayment.DTO.csproj"
-    },
-    "BillPaymentDbContext/1.0.0": {
-      "type": "project",
-      "path": "../BillPaymentDbContext/BillPaymentDbContext.csproj",
-      "msbuildProject": "../BillPaymentDbContext/BillPaymentDbContext.csproj"
-    },
     "Context/1.0.0": {
       "type": "project",
       "path": "../Context/Context.csproj",
       "msbuildProject": "../Context/Context.csproj"
+    },
+    "ModelClass/1.0.0": {
+      "type": "project",
+      "path": "../ModelClass/ModelClass.csproj",
+      "msbuildProject": "../ModelClass/ModelClass.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "BillPaymentDbContext >= 1.0.0",
       "Context >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.9",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.9"
@@ -5784,11 +5762,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ElectricBillPaymentSystem\\BillPayment.Service\\BillPayment.Service.csproj",
+      "projectUniqueName": "E:\\BappyFinalDefence\\ElectricBillPaymentSystem\\BillPayment.Service\\BillPayment.Service.csproj",
       "projectName": "BillPayment.Service",
-      "projectPath": "E:\\ElectricBillPaymentSystem\\BillPayment.Service\\BillPayment.Service.csproj",
+      "projectPath": "E:\\BappyFinalDefence\\ElectricBillPaymentSystem\\BillPayment.Service\\BillPayment.Service.csproj",
       "packagesPath": "C:\\Users\\dCL\\.nuget\\packages\\",
-      "outputPath": "E:\\ElectricBillPaymentSystem\\BillPayment.Service\\obj\\",
+      "outputPath": "E:\\BappyFinalDefence\\ElectricBillPaymentSystem\\BillPayment.Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dCL\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5804,11 +5782,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "E:\\ElectricBillPaymentSystem\\BillPaymentDbContext\\BillPaymentDbContext.csproj": {
-              "projectPath": "E:\\ElectricBillPaymentSystem\\BillPaymentDbContext\\BillPaymentDbContext.csproj"
-            },
-            "E:\\ElectricBillPaymentSystem\\Context\\Context.csproj": {
-              "projectPath": "E:\\ElectricBillPaymentSystem\\Context\\Context.csproj"
+            "E:\\BappyFinalDefence\\ElectricBillPaymentSystem\\Context\\Context.csproj": {
+              "projectPath": "E:\\BappyFinalDefence\\ElectricBillPaymentSystem\\Context\\Context.csproj"
             }
           }
         }

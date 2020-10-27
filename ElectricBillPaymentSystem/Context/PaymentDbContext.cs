@@ -1,6 +1,6 @@
 ﻿
-using BillPayment.DTO.DTO;
 using Microsoft.EntityFrameworkCore;
+using ModelClass.DTO;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,7 +15,7 @@ namespace Context
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.EnableSensitiveDataLogging();
+            
         }
 
         public virtual DbSet<BillTable> BillTable { get; set; }
@@ -29,6 +29,9 @@ namespace Context
         public virtual DbSet<Support> Support { get; set; }
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<UserRole> UserRole { get; set; }
+        public virtual DbSet<Zone> Zone { get; set; }
+        public virtual DbSet<ZoneAssign> ZoneAssign { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -38,6 +41,17 @@ namespace Context
                 entity.HasKey(e => e.NoticeId);
                 entity.Property(e => e.Notices);
             });
+            modelBuilder.Entity<Zone>(entity =>
+            {
+                entity.HasKey(e => e.ZoneId);
+            });
+
+            modelBuilder.Entity<ZoneAssign>(entity =>
+            {
+                entity.HasKey(e => e.ZoneAssignId);
+            });
+
+
 
 
             modelBuilder.Entity<BillTable>(entity =>
@@ -46,6 +60,16 @@ namespace Context
                 entity.Property(d => d.CustomerId);
                 entity.Property(d => d.MeterId);
                 entity.Property(d => d.BillStatus);
+                entity.HasOne(e => e.MeterReadingTable)
+                .WithOne(e => e.BillTable)
+                .HasForeignKey<BillTable>(e => e.MeterReadingId);
+
+                
+                
+               
+                
+                
+                
             });
 
 
@@ -98,22 +122,22 @@ namespace Context
                 .HasForeignKey(d => d.MeterId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+                
+
             });
 
 
             modelBuilder.Entity<MeterReadingTable>(entity =>
             {
                 entity.HasKey(e => e.MeterReadingId);
-                entity.HasOne(d => d.Customer)
-                .WithMany(p => p.MeterReadingTable)
-                .HasForeignKey(d => d.CustomerId)
-                .OnDelete(DeleteBehavior.Cascade);
 
 
-                entity.HasOne(d => d.MeterTable)
+
+                entity.HasOne(d => d.MeterAssign)
                 .WithMany(p => p.MeterReadingTable)
-                .HasForeignKey(d => d.MeterId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .HasForeignKey(d => d.MeterAssignId)
+                .OnDelete(DeleteBehavior.Restrict);
+                
 
                 entity.Property(e => e.CurrentUnit);
             });
@@ -125,6 +149,10 @@ namespace Context
                 entity.Property(d => d.Email);
                 entity.Property(d => d.CustomerName);
 
+                entity.HasOne(e => e.Zone)
+               .WithOne(e => e.Customer)
+               .HasForeignKey<Customer>(e => e.ZoneId);
+
             });
 
             modelBuilder.Entity<Payment>(entity =>
@@ -132,6 +160,10 @@ namespace Context
                 entity.HasKey(e => e.PaymentId);
                 entity.Property(d => d.BillId);
                 entity.Property(d => d.PaymentMethod);
+
+                entity.HasOne(e => e.BillTable)
+               .WithOne(e => e.Payment)
+               .HasForeignKey<Payment>(e => e.BillId);
             });
 
             modelBuilder.Entity<Support>(entity =>

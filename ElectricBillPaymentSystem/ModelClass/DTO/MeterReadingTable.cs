@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BillPayment.DTO.DTO
+namespace ModelClass.DTO
 {
-   public class MeterReadingTable
+    public class MeterReadingTable
     {
         public int MeterReadingId { get; set; }
+        public int MeterAssignId { get; set; }
         public int CustomerId { get; set; }
         public int MeterId { get; set; }
         public double CurrentUnit { get; set; }
@@ -15,7 +16,7 @@ namespace BillPayment.DTO.DTO
         public string UpdatedBy { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public int Status { get; set; }
-        public virtual Customer Customer { get; set; }
-        public virtual MeterTable MeterTable { get; set; }
+        public virtual BillTable BillTable{get;set;}
+        public virtual MeterAssign MeterAssign{get;set;}
     }
 }

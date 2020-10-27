@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BillPayment.DTO.DTO
+namespace ModelClass.DTO
 {
-   public class Role
+    public class Role
     {
         public int RoleId { get; set; }
         public string RoleName { get; set; }

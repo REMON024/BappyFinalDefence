@@ -19,7 +19,7 @@ namespace Context.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("BillPayment.DTO.DTO.BillTable", b =>
+            modelBuilder.Entity("ModelClass.DTO.BillTable", b =>
                 {
                     b.Property<int>("BillId")
                         .ValueGeneratedOnAdd()
@@ -50,6 +50,9 @@ namespace Context.Migrations
                     b.Property<int>("MeterId")
                         .HasColumnType("int");
 
+                    b.Property<int>("MeterReadingId")
+                        .HasColumnType("int");
+
                     b.Property<int>("PreviousMonth")
                         .HasColumnType("int");
 
@@ -67,10 +70,13 @@ namespace Context.Migrations
 
                     b.HasKey("BillId");
 
+                    b.HasIndex("MeterReadingId")
+                        .IsUnique();
+
                     b.ToTable("BillTable");
                 });
 
-            modelBuilder.Entity("BillPayment.DTO.DTO.Customer", b =>
+            modelBuilder.Entity("ModelClass.DTO.Customer", b =>
                 {
                     b.Property<int>("CustomerId")
                         .ValueGeneratedOnAdd()
@@ -110,6 +116,12 @@ namespace Context.Migrations
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Latitude")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Longitude")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("MeterNumber")
                         .HasColumnType("nvarchar(max)");
 
@@ -134,12 +146,21 @@ namespace Context.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ZoneId")
+                        .HasColumnType("int");
+
                     b.HasKey("CustomerId");
+
+                    b.HasIndex("ZoneId")
+                        .IsUnique();
 
                     b.ToTable("Customer");
                 });
 
-            modelBuilder.Entity("BillPayment.DTO.DTO.MeterAssign", b =>
+            modelBuilder.Entity("ModelClass.DTO.MeterAssign", b =>
                 {
                     b.Property<int>("MeterAssignId")
                         .ValueGeneratedOnAdd()
@@ -176,7 +197,7 @@ namespace Context.Migrations
                     b.ToTable("MeterAssign");
                 });
 
-            modelBuilder.Entity("BillPayment.DTO.DTO.MeterReadingTable", b =>
+            modelBuilder.Entity("ModelClass.DTO.MeterReadingTable", b =>
                 {
                     b.Property<int>("MeterReadingId")
                         .ValueGeneratedOnAdd()
@@ -195,6 +216,9 @@ namespace Context.Migrations
                     b.Property<int>("CustomerId")
                         .HasColumnType("int");
 
+                    b.Property<int>("MeterAssignId")
+                        .HasColumnType("int");
+
                     b.Property<int>("MeterId")
                         .HasColumnType("int");
 
@@ -209,14 +233,12 @@ namespace Context.Migrations
 
                     b.HasKey("MeterReadingId");
 
-                    b.HasIndex("CustomerId");
-
-                    b.HasIndex("MeterId");
+                    b.HasIndex("MeterAssignId");
 
                     b.ToTable("MeterReadingTable");
                 });
 
-            modelBuilder.Entity("BillPayment.DTO.DTO.MeterTable", b =>
+            modelBuilder.Entity("ModelClass.DTO.MeterTable", b =>
                 {
                     b.Property<int>("MeterId")
                         .ValueGeneratedOnAdd()
@@ -249,7 +271,7 @@ namespace Context.Migrations
                     b.ToTable("MeterTable");
                 });
 
-            modelBuilder.Entity("BillPayment.DTO.DTO.Notice", b =>
+            modelBuilder.Entity("ModelClass.DTO.Notice", b =>
                 {
                     b.Property<int>("NoticeId")
                         .ValueGeneratedOnAdd()
@@ -264,7 +286,7 @@ namespace Context.Migrations
                     b.ToTable("Notice");
                 });
 
-            modelBuilder.Entity("BillPayment.DTO.DTO.Payment", b =>
+            modelBuilder.Entity("ModelClass.DTO.Payment", b =>
                 {
                     b.Property<int>("PaymentId")
                         .ValueGeneratedOnAdd()
@@ -300,10 +322,13 @@ namespace Context.Migrations
 
                     b.HasKey("PaymentId");
 
+                    b.HasIndex("BillId")
+                        .IsUnique();
+
                     b.ToTable("Payment");
                 });
 
-            modelBuilder.Entity("BillPayment.DTO.DTO.Role", b =>
+            modelBuilder.Entity("ModelClass.DTO.Role", b =>
                 {
                     b.Property<int>("RoleId")
                         .ValueGeneratedOnAdd()
@@ -333,7 +358,7 @@ namespace Context.Migrations
                     b.ToTable("Role");
                 });
 
-            modelBuilder.Entity("BillPayment.DTO.DTO.Support", b =>
+            modelBuilder.Entity("ModelClass.DTO.Support", b =>
                 {
                     b.Property<int>("SupportId")
                         .ValueGeneratedOnAdd()
@@ -366,7 +391,7 @@ namespace Context.Migrations
                     b.ToTable("Support");
                 });
 
-            modelBuilder.Entity("BillPayment.DTO.DTO.User", b =>
+            modelBuilder.Entity("ModelClass.DTO.User", b =>
                 {
                     b.Property<int>("UserId")
                         .ValueGeneratedOnAdd()
@@ -411,7 +436,7 @@ namespace Context.Migrations
                     b.ToTable("User");
                 });
 
-            modelBuilder.Entity("BillPayment.DTO.DTO.UserRole", b =>
+            modelBuilder.Entity("ModelClass.DTO.UserRole", b =>
                 {
                     b.Property<int>("UserRoleId")
                         .ValueGeneratedOnAdd()
@@ -448,45 +473,129 @@ namespace Context.Migrations
                     b.ToTable("UserRole");
                 });
 
-            modelBuilder.Entity("BillPayment.DTO.DTO.MeterAssign", b =>
+            modelBuilder.Entity("ModelClass.DTO.Zone", b =>
                 {
-                    b.HasOne("BillPayment.DTO.DTO.Customer", "Customer")
+                    b.Property<int>("ZoneId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ZoneName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ZoneId");
+
+                    b.ToTable("Zone");
+                });
+
+            modelBuilder.Entity("ModelClass.DTO.ZoneAssign", b =>
+                {
+                    b.Property<int>("ZoneAssignId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("MeterReaderId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ZoneId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ZoneAssignId");
+
+                    b.ToTable("ZoneAssign");
+                });
+
+            modelBuilder.Entity("ModelClass.DTO.BillTable", b =>
+                {
+                    b.HasOne("ModelClass.DTO.MeterReadingTable", "MeterReadingTable")
+                        .WithOne("BillTable")
+                        .HasForeignKey("ModelClass.DTO.BillTable", "MeterReadingId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("ModelClass.DTO.Customer", b =>
+                {
+                    b.HasOne("ModelClass.DTO.Zone", "Zone")
+                        .WithOne("Customer")
+                        .HasForeignKey("ModelClass.DTO.Customer", "ZoneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("ModelClass.DTO.MeterAssign", b =>
+                {
+                    b.HasOne("ModelClass.DTO.Customer", "Customer")
                         .WithMany("MeterAssign")
                         .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("BillPayment.DTO.DTO.MeterTable", "MeterTable")
+                    b.HasOne("ModelClass.DTO.MeterTable", "MeterTable")
                         .WithMany("MeterAssign")
                         .HasForeignKey("MeterId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("BillPayment.DTO.DTO.MeterReadingTable", b =>
+            modelBuilder.Entity("ModelClass.DTO.MeterReadingTable", b =>
                 {
-                    b.HasOne("BillPayment.DTO.DTO.Customer", "Customer")
+                    b.HasOne("ModelClass.DTO.MeterAssign", "MeterAssign")
                         .WithMany("MeterReadingTable")
-                        .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .HasForeignKey("MeterAssignId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+                });
 
-                    b.HasOne("BillPayment.DTO.DTO.MeterTable", "MeterTable")
-                        .WithMany("MeterReadingTable")
-                        .HasForeignKey("MeterId")
+            modelBuilder.Entity("ModelClass.DTO.Payment", b =>
+                {
+                    b.HasOne("ModelClass.DTO.BillTable", "BillTable")
+                        .WithOne("Payment")
+                        .HasForeignKey("ModelClass.DTO.Payment", "BillId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("BillPayment.DTO.DTO.UserRole", b =>
+            modelBuilder.Entity("ModelClass.DTO.UserRole", b =>
                 {
-                    b.HasOne("BillPayment.DTO.DTO.Role", "Role")
+                    b.HasOne("ModelClass.DTO.Role", "Role")
                         .WithMany("UserRole")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("BillPayment.DTO.DTO.User", "User")
+                    b.HasOne("ModelClass.DTO.User", "User")
                         .WithMany("UserRole")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)

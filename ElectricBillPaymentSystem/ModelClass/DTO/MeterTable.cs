@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BillPayment.DTO.DTO
+namespace ModelClass.DTO
 {
-   public class MeterTable
+    public class MeterTable
     {
         public int MeterId { get; set; }
         public string MeterNumber { get; set; }
@@ -15,6 +15,6 @@ namespace BillPayment.DTO.DTO
         public DateTime? UpdatedDate { get; set; }
         public int Status { get; set; }
         public ICollection<MeterAssign> MeterAssign { get; set; }
-        public ICollection<MeterReadingTable> MeterReadingTable { get; set; }
+        
     }
 }

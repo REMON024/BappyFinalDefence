@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ElectricBillPaymentSystem\\ModelClass\\ModelClass.csproj",
+      "projectUniqueName": "E:\\BappyFinalDefence\\ElectricBillPaymentSystem\\ModelClass\\ModelClass.csproj",
       "projectName": "ModelClass",
-      "projectPath": "E:\\ElectricBillPaymentSystem\\ModelClass\\ModelClass.csproj",
+      "projectPath": "E:\\BappyFinalDefence\\ElectricBillPaymentSystem\\ModelClass\\ModelClass.csproj",
       "packagesPath": "C:\\Users\\dCL\\.nuget\\packages\\",
-      "outputPath": "E:\\ElectricBillPaymentSystem\\ModelClass\\obj\\",
+      "outputPath": "E:\\BappyFinalDefence\\ElectricBillPaymentSystem\\ModelClass\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dCL\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,9 +1,0 @@
-E:\ElectricBillPaymentSystem\BillPayment.DTO\bin\Debug\netstandard2.0\BillPayment.DTO.deps.json
-E:\ElectricBillPaymentSystem\BillPayment.DTO\bin\Debug\netstandard2.0\BillPayment.DTO.dll
-E:\ElectricBillPaymentSystem\BillPayment.DTO\obj\Debug\netstandard2.0\BillPayment.DTO.csprojAssemblyReference.cache
-E:\ElectricBillPaymentSystem\BillPayment.DTO\obj\Debug\netstandard2.0\BillPayment.DTO.AssemblyInfoInputs.cache
-E:\ElectricBillPaymentSystem\BillPayment.DTO\obj\Debug\netstandard2.0\BillPayment.DTO.AssemblyInfo.cs
-E:\ElectricBillPaymentSystem\BillPayment.DTO\bin\Debug\netstandard2.0\BillPayment.DTO.pdb
-E:\ElectricBillPaymentSystem\BillPayment.DTO\obj\Debug\netstandard2.0\BillPayment.DTO.csproj.CoreCompileInputs.cache
-E:\ElectricBillPaymentSystem\BillPayment.DTO\obj\Debug\netstandard2.0\BillPayment.DTO.dll
-E:\ElectricBillPaymentSystem\BillPayment.DTO\obj\Debug\netstandard2.0\BillPayment.DTO.pdb

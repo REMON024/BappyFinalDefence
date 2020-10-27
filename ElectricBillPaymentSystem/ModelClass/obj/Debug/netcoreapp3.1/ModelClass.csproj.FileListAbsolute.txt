@@ -7,3 +7,12 @@ E:\ElectricBillPaymentSystem\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.Assem
 E:\ElectricBillPaymentSystem\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.csproj.CoreCompileInputs.cache
 E:\ElectricBillPaymentSystem\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.dll
 E:\ElectricBillPaymentSystem\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.pdb
+E:\BappyFinalDefence\ElectricBillPaymentSystem\ModelClass\bin\Debug\netcoreapp3.1\ModelClass.deps.json
+E:\BappyFinalDefence\ElectricBillPaymentSystem\ModelClass\bin\Debug\netcoreapp3.1\ModelClass.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\ModelClass\bin\Debug\netcoreapp3.1\ModelClass.pdb
+E:\BappyFinalDefence\ElectricBillPaymentSystem\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.csprojAssemblyReference.cache
+E:\BappyFinalDefence\ElectricBillPaymentSystem\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.AssemblyInfoInputs.cache
+E:\BappyFinalDefence\ElectricBillPaymentSystem\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.AssemblyInfo.cs
+E:\BappyFinalDefence\ElectricBillPaymentSystem\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.csproj.CoreCompileInputs.cache
+E:\BappyFinalDefence\ElectricBillPaymentSystem\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.pdb
