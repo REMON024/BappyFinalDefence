@@ -1,0 +1,14 @@
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\ElectricBillPayment.BLL\obj\Debug\netcoreapp3.1\ElectricBillPayment.BLL.csprojAssemblyReference.cache
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\ElectricBillPayment.BLL\obj\Debug\netcoreapp3.1\ElectricBillPayment.BLL.AssemblyInfoInputs.cache
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\ElectricBillPayment.BLL\obj\Debug\netcoreapp3.1\ElectricBillPayment.BLL.AssemblyInfo.cs
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\ElectricBillPayment.BLL\obj\Debug\netcoreapp3.1\ElectricBillPayment.BLL.csproj.CoreCompileInputs.cache
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\ElectricBillPayment.BLL\bin\Debug\netcoreapp3.1\ElectricBillPayment.BLL.deps.json
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\ElectricBillPayment.BLL\bin\Debug\netcoreapp3.1\ElectricBillPayment.BLL.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\ElectricBillPayment.BLL\bin\Debug\netcoreapp3.1\ElectricBillPayment.BLL.pdb
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\ElectricBillPayment.BLL\bin\Debug\netcoreapp3.1\Context.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\ElectricBillPayment.BLL\bin\Debug\netcoreapp3.1\ModelClass.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\ElectricBillPayment.BLL\bin\Debug\netcoreapp3.1\Context.pdb
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\ElectricBillPayment.BLL\bin\Debug\netcoreapp3.1\ModelClass.pdb
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\ElectricBillPayment.BLL\obj\Debug\netcoreapp3.1\ElectricBillPayment.BLL.csproj.CopyComplete
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\ElectricBillPayment.BLL\obj\Debug\netcoreapp3.1\ElectricBillPayment.BLL.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\ElectricBillPayment.BLL\obj\Debug\netcoreapp3.1\ElectricBillPayment.BLL.pdb
